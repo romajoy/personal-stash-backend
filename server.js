@@ -1,32 +1,27 @@
 const express = require('express')
 const app = express()
 const mongoose = require ('mongoose')
-const Yarn = require('./models/yarn.js')
-const Hook = require('./models/hooks.js')
+const cors = require('cors')
 
+
+// JSON Middleware
 app.use(express.json())
+app.use(cors())
 
-app.post('/yarn', (req,res) => {
-    Yarn.create(req.body, (err, createdYarn) => {
-        res.json(createdYarn)
-    })
-})
+// Routing Controllers
+const yarnController = require('./controllers/yarncontroller.js')
+app.use(yarnController)
 
-app.get('/yarn', (req, res) => {
-    Yarn.find({}, (err, foundYarn) => {
-        res.json(foundYarn)
-    })
-})
+const hookController = require('./controllers/hookcontroller.js')
+app.use(hookController)
 
-
-
-
-
+// Mongoose Connection
 mongoose.connect('mongodb://localhost:27017/stash')
 mongoose.connection.once('open', () => {
     console.log('connected to mongod!')
 })
 
+// Listening
 app.listen(3000, () => {
     console.log('lisening...')
 })
