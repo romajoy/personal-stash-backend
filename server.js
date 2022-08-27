@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const mongoose = require ('mongoose')
 const Yarn = require('./models/yarn.js')
+const Hook = require('./models/hooks.js')
 
 app.use(express.json())
 
