@@ -1,6 +1,5 @@
 
 const express = require('express')
-const { create } = require('../models/yarn.js')
 const router = express.Router()
 const Yarn = require('../models/yarn.js')
 
