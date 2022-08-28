@@ -5,6 +5,7 @@ const yarnSchema = new mongoose.Schema({
     name: String,
     color: String,
     yards: Number,
+    fiber: String,
     weight: String,
     purchaseDate: Date,
     skeins: Number,
