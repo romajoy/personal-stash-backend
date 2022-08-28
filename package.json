@@ -1,6 +1,9 @@
 {
   "name": "personal-stash-backend",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.15.1"
+  },
   "description": "Back End of project",
   "main": "server.js",
   "scripts": {
@@ -18,6 +21,7 @@
   "homepage": "https://github.com/romajoy/personal-stash-backend#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mongoos": "^0.0.1-security",
     "mongoose": "^6.5.3"
