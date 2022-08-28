@@ -9,7 +9,8 @@ const yarnSchema = new mongoose.Schema({
     purchaseDate: Date,
     skeins: Number,
     store: String,
-    note: String
+    note: String,
+    image: String,
 })
 
 const Yarn = mongoose.model('Yarn', yarnSchema)
