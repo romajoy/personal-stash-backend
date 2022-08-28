@@ -5,11 +5,13 @@ const yarnSchema = new mongoose.Schema({
     name: String,
     color: String,
     yards: Number,
+    fiber: String,
     weight: String,
     purchaseDate: Date,
     skeins: Number,
     store: String,
-    note: String
+    note: String,
+    image: String,
 })
 
 const Yarn = mongoose.model('Yarn', yarnSchema)

@@ -15,6 +15,7 @@ const hookSchema = new mongoose.Schema ({
     long: String, // 16"
     point: String, // ex. lace-point, etc.
     completeSet: Boolean, // for DPN's
+    image: String
 })
 
 const Hooks = mongoose.model('Hooks', hookSchema)
